@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://a1word.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://alloneword.pages.dev/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
-<loc>https://a1word.github.io/</loc>
+<loc>https://alloneword.pages.dev/</loc>
 </url>
 <url>
-<loc>https://a1word.github.io/atomic-mail-my-thoughts.html</loc>
+<loc>https://alloneword.pages.dev/atomic-mail-my-thoughts.html</loc>
 <lastmod>2026-02-21T19:41:00+00:00</lastmod>
 </url>
 <url>
-<loc>https://a1word.github.io/i-asked-chatgpt-to-create-a-google-mail-script.html</loc>
+<loc>https://alloneword.pages.dev/i-asked-chatgpt-to-create-a-google-mail-script.html</loc>
 <lastmod>2026-03-03T18:51:11+00:00</lastmod>
 <image:image>
-<image:loc>https://a1word.github.io/media/posts/2//google-mail-script.png</image:loc>
+<image:loc>https://alloneword.pages.dev/media/posts/2//google-mail-script.png</image:loc>
 <image:title><![CDATA[Screencap of the generated Google Apps Script.]]></image:title>
 </image:image>
 </url>
 <url>
-<loc>https://a1word.github.io/mxroute-alias-manager.html</loc>
+<loc>https://alloneword.pages.dev/mxroute-alias-manager.html</loc>
 <lastmod>2026-03-04T08:38:28+00:00</lastmod>
 </url>
 <url>
-<loc>https://a1word.github.io/page/2/</loc>
+<loc>https://alloneword.pages.dev/page/2/</loc>
 </url>
 <url>
-<loc>https://a1word.github.io/port87-label-powered-email.html</loc>
+<loc>https://alloneword.pages.dev/port87-label-powered-email.html</loc>
 <lastmod>2026-02-22T10:22:25+00:00</lastmod>
 </url>
 <url>
-<loc>https://a1word.github.io/understanding-dmarc-reports.html</loc>
+<loc>https://alloneword.pages.dev/understanding-dmarc-reports.html</loc>
 <lastmod>2026-02-21T19:41:30+00:00</lastmod>
 </url>
 <url>
-<loc>https://a1word.github.io/youve-got-mail.html</loc>
-<lastmod>2026-04-09T09:56:26+01:00</lastmod>
+<loc>https://alloneword.pages.dev/youve-got-mail.html</loc>
+<lastmod>2026-04-10T15:38:11+01:00</lastmod>
 </url>
 <url>
-<loc>https://a1word.github.io/zoho-mail-a-cautionary-tale-with-a-happy-ending.html</loc>
+<loc>https://alloneword.pages.dev/zoho-mail-a-cautionary-tale-with-a-happy-ending.html</loc>
 <lastmod>2026-02-21T19:41:11+00:00</lastmod>
 </url>
 <url>
-<loc>https://a1word.github.io/zoho-mail-forever-free-plan.html</loc>
+<loc>https://alloneword.pages.dev/zoho-mail-forever-free-plan.html</loc>
 <lastmod>2026-03-03T18:52:51+00:00</lastmod>
 </url>
 </urlset>
