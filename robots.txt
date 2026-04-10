@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://a1word.github.io/sitemap.xml
