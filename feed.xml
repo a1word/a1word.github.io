@@ -3,12 +3,43 @@
     <title>Notes from the Inbox</title>
     <link href="https://alloneword.pages.dev/feed.xml" rel="self" />
     <link href="https://alloneword.pages.dev" />
-    <updated>2026-04-22T08:51:45+01:00</updated>
+    <updated>2026-04-30T08:37:51+01:00</updated>
     <author>
         <name>EMD</name>
     </author>
     <id>https://alloneword.pages.dev</id>
 
+    <entry>
+        <title>Mailo - Teething Problems?</title>
+        <author>
+            <name>EMD</name>
+        </author>
+        <link href="https://alloneword.pages.dev/mailo-teething-problems.html"/>
+        <id>https://alloneword.pages.dev/mailo-teething-problems.html</id>
+
+        <updated>2026-04-30T08:09:59+01:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <p>My use of Mailo actually started because I was seeking an alternative to my Google Calendar.</p>
+<p>A few months ago, I had exported all my calendars/events from Google Calendar to Zoho Calendar.</p>
+<p>All seemed well, but I discovered that when I tried to search a calendar for a series of older events from previous years - Zoho reported no results!</p>
+<p>Now, I knew for a fact (and did subsequently check to confirm) that these old events were searchable in Google Calendar - I found these events going back to 2019.</p>
+<p>I hadn't used Mailo before, so I decided to see how their calendars stacked up against Google.</p>
+<p>I imported the same calendar from Google into Mailo, and did the same search for the same event that the Zoho Calendar didn't find.</p>
+<p>Result? Success! The Mailo Calendar had listed all the older events.</p>
+<p>Initially, I was pleased with Mailo - the calendar appeared to be working, with CalDAV easily set up to my mobile phone. The same with setting up the email and the WebDAV.</p>
+<p>Until . . .</p>
+<p>I had some upcoming calendar events that I wanted reminders for - I set up both email and notifications. On the first event reminder (an all-day event) I set the reminders to 1 hour before the event (2300 hrs). The day of the event, and switched on my mobile phone, the notification 'pinged' - but no email? The following day, a similar event with similar reminders - got the 'ping', didn't get an email!</p>
+<p>But . . .</p>
+<p>Surprise, surprise! For this event, I received the email at 1100 hrs on the day - some 12 hours late. Of course, some would say 'your time zone is wrong' but when I first set up the account I corrected the time zone and checked it just now to confirm.</p>
+<p>Without that email arriving on time, it seemed that the Mailo Calendar just would not cut it for me.</p>
+<p>Another problem occurred with emails. I had 2 legitimate emails rejected by Mailo - the subject: 'Mailo Free's security system has refused a message'.</p>
+<p>Maybe the problems with both the calendar reminders and also the rejected emails <em>could</em> be teething problems - I'll wait and see.</p>
+<p>But for now, it's back to Google Calendar!  </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Zoho Mail Forever Free Plan</title>
         <author>
