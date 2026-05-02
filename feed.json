@@ -11,6 +11,19 @@
     },
     "items": [
         {
+            "id": "https://alloneword.pages.dev/aster-mail-free.html",
+            "url": "https://alloneword.pages.dev/aster-mail-free.html",
+            "title": "Aster Mail Free",
+            "content_html": "<p>This is a brief 'heads up' of the relative newcomer to email: <a href=\"https://astermail.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Aster Mail</a></p>\n<p>Initially, this is an interesting offering, as they allow the use of one's own domain in this free account.</p>\n<p>I won't go into any depth about how to sign up for an account, etc. I'm sure that you're capable of finding out how to do that for yourself!</p>\n<p><strong><em>My Observations</em></strong></p>\n<p>First of all, although Aster - the company - is based in the US, their mail servers and infrastructure are run by Hetzner in Falkenstein, Germany. Here's a better explanation of their set up:</p>\n<p><a href=\"https://astermail.org/blog/is-aster-safe-us-based/\" target=\"_blank\" rel=\"noopener noreferrer\">Is Aster Safe If It's Based in the US?</a></p>\n<p><a href=\"https://astermail.org/\" target=\"_blank\" rel=\"noopener noreferrer\"></a>After initially signing up and testing the free 10 GB account, I was quite impressed by the overall set up and the layout of their UI.</p>\n<p>It was also easy to set up one of my own personal domains - the instructions were straightforward and in a matter of minutes it was all set up and working.</p>\n<p>As I'm still talking about their free account, there are some limitations:</p>\n<ol>\n<li>Only one own domain allowed.</li>\n<li>A maximum of five aliases allowed. Once an alias is created, you cannot delete it for a month.</li>\n<li>No catchall - you have to rely on the five own domain aliases only.</li>\n<li>No IMAP/SMTP currently - access via webmail and installers for Windows, Linux, and macOS.</li>\n<li>No auto-forward rules.</li>\n<li>Only one mail filter.</li>\n</ol>\n<p>It's not initially obvious how/where to set up this one filter, although I assume it's the 'Mail Management' option - which for the free account seems to only include blocked or allowed senders.</p>\n<p>The main 'selling point' of this free account is the use of one's domain. If you're on the lookout for a free home for your own domain emails, it's certainly worth a try!</p>",
+            "author": {
+                "name": "EMD"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-05-02T11:53:11+01:00",
+            "date_modified": "2026-05-02T12:08:29+01:00"
+        },
+        {
             "id": "https://alloneword.pages.dev/mailo-teething-problems.html",
             "url": "https://alloneword.pages.dev/mailo-teething-problems.html",
             "title": "Mailo - Teething Problems?",
