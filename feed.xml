@@ -3,12 +3,36 @@
     <title>Notes from the Inbox</title>
     <link href="https://alloneword.pages.dev/feed.xml" rel="self" />
     <link href="https://alloneword.pages.dev" />
-    <updated>2026-05-02T12:08:29+01:00</updated>
+    <updated>2026-05-07T09:11:21+01:00</updated>
     <author>
         <name>EMD</name>
     </author>
     <id>https://alloneword.pages.dev</id>
 
+    <entry>
+        <title>What&#x27;s in a DKIM Record?</title>
+        <author>
+            <name>EMD</name>
+        </author>
+        <link href="https://alloneword.pages.dev/whats-in-a-dkim-record.html"/>
+        <id>https://alloneword.pages.dev/whats-in-a-dkim-record.html</id>
+
+        <updated>2026-05-07T09:09:36+01:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <p>I had recently opened a test <a href="https://astermail.org/" target="_blank" rel="noopener noreferrer">Aster Mail</a> email account, which allows for one free own domain to be used. For my test using a spare own domain, I was setting up the usual DNS records (MX, SPF, DMARC), but when it came to the <a href="https://www.cloudflare.com/en-gb/learning/dns/dns-records/dns-dkim-record/" target="_blank" rel="noopener noreferrer">DKIM record</a> I was slightly confused - the length of the record was much shorter than I had been accustomed to using.</p>
+<p>The current industry standard is <span style="text-decoration: underline;">RSA</span>, where a 2048-bit key results in a very long string of nearly 400 characters, and this was the format that I was used to.</p>
+<p>This key begins with: </p>
+<pre class="alert alert-success">v=DKIM1; k=rsa;</pre>
+<p>In contrast, Aster Mail were using the more modern <span style="text-decoration: underline;">Ed25519</span> format, which produces a much shorter key of exactly 44 characters, and this was a new one to me - I'd never seen it before.</p>
+<p>This key begins with:</p>
+<pre class="alert alert-success">v=DKIM1; k=ed25519;</pre>
+<p>Both of the above keys would be <span style="text-decoration: underline;">TXT</span> records. Because these keys are static, they're not 'rotatable' - you need to have a new key generated, and publish it alongside the old one to avoid delivery gaps, and eventually remove the outdated record once the new one has propagated.</p>
+<p>There are other email providers (for example, mailbox.org) that provide the DKIM key in a <span style="text-decoration: underline;">CNAME</span> format - which allows them to rotate the keys automatically on a regular basis.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Aster Mail Free</title>
         <author>
@@ -294,34 +318,6 @@
 <p>Within a few seconds, I got this response:</p>
 <figure class="post__image"><img loading="lazy"  src="https://alloneword.pages.dev/media/posts/2//google-mail-script.png" alt="Screencap of the generated Google Apps Script." width="880" height="943" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-xs.png 640w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-sm.png 768w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-md.png 1024w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-lg.png 1366w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-xl.png 1600w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-2xl.png 1920w"></figure>
 <p>Could it be that simple, I asked myself?<br><br>There's only one way to find out, so I copied the code and went to <a href="https://script.google.com" target="_blank" rel="noopener noreferrer">https://script.google.com</a> for my Gmail account and created a new project, and pasted the code.<br><br>Saved and Run, I had to authorise the use of the script.<br><br>Following the ChatGPT instructions on how to set up, I created the trigger to run once an hour, and saved that.<br><br>I was sceptical about whether it would work, but - and admittedly it's early days yet - the script does appear to work!</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>You&#x27;ve got mail!</title>
-        <author>
-            <name>EMD</name>
-        </author>
-        <link href="https://alloneword.pages.dev/youve-got-mail.html"/>
-        <id>https://alloneword.pages.dev/youve-got-mail.html</id>
-
-        <updated>2026-01-27T18:33:25+00:00</updated>
-            <summary></summary>
-        <content type="html">
-            <![CDATA[
-                <figure class="post__image"><img loading="lazy"  src="https://ik.imagekit.io/rkumag9jl/emd-header-image.png" alt="Digital communication in a techno world!" width="1534" height="606" data-is-external-image="true"></figure>
-<p>Up to now, I've posted any email-related 'stuff' on my personal blog, but have now decided to post that content on a separate blog.</p>
-<p>So, here it is!</p>
-<p><strong><em>The plumbing!</em></strong></p>
-<p>This is the combination that enables the creation of the blog:</p>
-<p><em>Cloudflare Pages</em> - The blog is hosted by <a href="https://developers.cloudflare.com/pages/">Cloudflare Pages</a> - a static site hosting service.</p>
-<p><em>Publii</em> - The blog is created by <a href="https://getpublii.com/" target="_blank" rel="noopener noreferrer">Publii</a>, a free, open-source desktop application, developed by a small team based in Poland.</p>
-<p><em>ImageKit</em> - The blog images are hosted by <a href="https://imagekit.io/" target="_blank" rel="noopener noreferrer">ImageKit</a>, an 'all-in-one media management and delivery platform', They operate a distributed processing network across multiple regions, including Frankfurt.</p>
-<p><strong><em>Notes</em></strong></p>
-<p>Any trademarks and trademarked content (such as screenshots) are the properties of their respective owners.</p>
-<p>Affiliate Links? Nope, none here!</p>
-<p>Sponsored content? Nope, none here!</p>
-<p><em>Hoping to leave a comment? Sorry, there aren’t any here. It’s not that your thoughts don’t matter – I just value my sanity more than moderating a comment section. If you wish to comment on any of my posts, you may comment via my <a href="https://mastodon.social/@EMDiscussions" target="_blank" rel="noopener noreferrer">Mastodon</a> account.</em></p>
             ]]>
         </content>
     </entry>
