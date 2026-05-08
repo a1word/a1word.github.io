@@ -3,7 +3,7 @@
     <title>Notes from the Inbox</title>
     <link href="https://alloneword.pages.dev/feed.xml" rel="self" />
     <link href="https://alloneword.pages.dev" />
-    <updated>2026-05-07T09:11:21+01:00</updated>
+    <updated>2026-05-08T08:25:09+01:00</updated>
     <author>
         <name>EMD</name>
     </author>
@@ -46,12 +46,12 @@
         <content type="html">
             <![CDATA[
                 <p>This is a brief 'heads up' of the relative newcomer to email: <a href="https://astermail.org/" target="_blank" rel="noopener noreferrer">Aster Mail</a></p>
-<p>Initially, this is an interesting offering, as they allow the use of one's own domain in this free account.</p>
+<p>It's a very interesting offering, as they allow the use of one's own domain in this free account.</p>
 <p>I won't go into any depth about how to sign up for an account, etc. I'm sure that you're capable of finding out how to do that for yourself!</p>
 <p><strong><em>My Observations</em></strong></p>
 <p>First of all, although Aster - the company - is based in the US, their mail servers and infrastructure are run by Hetzner in Falkenstein, Germany. Here's a better explanation of their set up:</p>
 <p><a href="https://astermail.org/blog/is-aster-safe-us-based/" target="_blank" rel="noopener noreferrer">Is Aster Safe If It's Based in the US?</a></p>
-<p><a href="https://astermail.org/" target="_blank" rel="noopener noreferrer"></a>After initially signing up and testing the free 10 GB account, I was quite impressed by the overall set up and the layout of their UI.</p>
+<p><a href="https://astermail.org/" target="_blank" rel="noopener noreferrer"></a>After signing up and testing the free 10 GB account, I was quite impressed by the overall set up and the layout of their UI.</p>
 <p>It was also easy to set up one of my own personal domains - the instructions were straightforward and in a matter of minutes it was all set up and working.</p>
 <p>As I'm still talking about their free account, there are some limitations:</p>
 <ol>
@@ -62,8 +62,12 @@
 <li>No auto-forward rules.</li>
 <li>Only one mail filter.</li>
 </ol>
-<p>It's not initially obvious how/where to set up this one filter, although I assume it's the 'Mail Management' option - which for the free account seems to only include blocked or allowed senders.</p>
+<p>It's not obvious how/where to set up this one filter, although I assume it's the 'Mail Management' option - which for the free account seems to only include blocked or allowed senders.</p>
 <p>The main 'selling point' of this free account is the use of one's domain. If you're on the lookout for a free home for your own domain emails, it's certainly worth a try!</p>
+<p><em><strong>Update</strong></em></p>
+<p>Although it was easy to set up my own domain - the instructions were clear and logical - I did encounter a problem with my sent emails not being signed.</p>
+<p>I reported this to Aster Mail via their Discord channel, and Lucas Findley (The Founder and CEO of Aster Privacy) took the time to work through the problem with myself, and eventually all was good - my sent emails from my own domain were now being signed.</p>
+<p>Kudos to Lucas for going 'above and beyond' to assist me!</p>
             ]]>
         </content>
     </entry>
