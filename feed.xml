@@ -3,7 +3,7 @@
     <title>Notes from the Inbox</title>
     <link href="https://alloneword.pages.dev/feed.xml" rel="self" />
     <link href="https://alloneword.pages.dev" />
-    <updated>2026-05-08T08:25:09+01:00</updated>
+    <updated>2026-05-10T09:25:27+01:00</updated>
     <author>
         <name>EMD</name>
     </author>
@@ -29,7 +29,7 @@
 <p>This key begins with:</p>
 <pre class="alert alert-success">v=DKIM1; k=ed25519;</pre>
 <p>Both of the above keys would be <span style="text-decoration: underline;">TXT</span> records. Because these keys are static, they're not 'rotatable' - you need to have a new key generated, and publish it alongside the old one to avoid delivery gaps, and eventually remove the outdated record once the new one has propagated.</p>
-<p>There are other email providers (for example, mailbox.org) that provide the DKIM key in a <span style="text-decoration: underline;">CNAME</span> format - which allows them to rotate the keys automatically on a regular basis.</p>
+<p>There are other email providers (for example, mailbox.org and Migadu) that provide the DKIM key in a <span style="text-decoration: underline;">CNAME</span> format - which allows them to rotate the keys automatically on a regular basis.</p>
             ]]>
         </content>
     </entry>
