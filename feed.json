@@ -11,6 +11,19 @@
     },
     "items": [
         {
+            "id": "https://alloneword.pages.dev/moved-my-blog.html",
+            "url": "https://alloneword.pages.dev/moved-my-blog.html",
+            "title": "Moved my blog!",
+            "content_html": "<p>Yet, another change of blog provider from yours truely!</p>\n<p>I've set up a new blog with Vivaldi:</p>\n<p><a href=\"https://emdiscussions.vivaldi.net\" target=\"_blank\" rel=\"noopener noreferrer\">EMDiscussions - Notes from the Inbox</a></p>\n<p>Now, this <em>may</em> not be a permanent move - I may return here - but I have mirrored all my posts from here into the Vivaldi blog.</p>\n<p>I will leave this blog live for the foreseeable future.</p>",
+            "author": {
+                "name": "EMD"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-06-12T09:30:53+01:00",
+            "date_modified": "2026-06-12T09:31:53+01:00"
+        },
+        {
             "id": "https://alloneword.pages.dev/whats-in-a-dkim-record.html",
             "url": "https://alloneword.pages.dev/whats-in-a-dkim-record.html",
             "title": "What&#x27;s in a DKIM Record?",
@@ -126,19 +139,6 @@
             ],
             "date_published": "2026-01-28T10:12:17+00:00",
             "date_modified": "2026-02-21T19:41:30+00:00"
-        },
-        {
-            "id": "https://alloneword.pages.dev/i-asked-chatgpt-to-create-a-google-mail-script.html",
-            "url": "https://alloneword.pages.dev/i-asked-chatgpt-to-create-a-google-mail-script.html",
-            "title": "I asked ChatGPT to create a Google Mail Script",
-            "content_html": "<p>I asked ChatGPT:</p>\n<blockquote>\n<p><span style=\"color: #2dc26b;\"><em>Create a Google Gmail script to automatically delete emails older than 7 days that have the label '7-Days'.</em></span></p>\n</blockquote>\n<p>Within a few seconds, I got this response:</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://alloneword.pages.dev/media/posts/2//google-mail-script.png\" alt=\"Screencap of the generated Google Apps Script.\" width=\"880\" height=\"943\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-xs.png 640w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-sm.png 768w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-md.png 1024w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-lg.png 1366w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-xl.png 1600w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-2xl.png 1920w\"></figure>\n<p>Could it be that simple, I asked myself?<br><br>There's only one way to find out, so I copied the code and went to <a href=\"https://script.google.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://script.google.com</a> for my Gmail account and created a new project, and pasted the code.<br><br>Saved and Run, I had to authorise the use of the script.<br><br>Following the ChatGPT instructions on how to set up, I created the trigger to run once an hour, and saved that.<br><br>I was sceptical about whether it would work, but - and admittedly it's early days yet - the script does appear to work!</p>",
-            "author": {
-                "name": "EMD"
-            },
-            "tags": [
-            ],
-            "date_published": "2026-01-28T09:09:12+00:00",
-            "date_modified": "2026-03-03T18:51:11+00:00"
         }
     ]
 }

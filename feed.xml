@@ -3,12 +3,32 @@
     <title>Notes from the Inbox</title>
     <link href="https://alloneword.pages.dev/feed.xml" rel="self" />
     <link href="https://alloneword.pages.dev" />
-    <updated>2026-05-10T09:25:27+01:00</updated>
+    <updated>2026-06-12T09:31:53+01:00</updated>
     <author>
         <name>EMD</name>
     </author>
     <id>https://alloneword.pages.dev</id>
 
+    <entry>
+        <title>Moved my blog!</title>
+        <author>
+            <name>EMD</name>
+        </author>
+        <link href="https://alloneword.pages.dev/moved-my-blog.html"/>
+        <id>https://alloneword.pages.dev/moved-my-blog.html</id>
+
+        <updated>2026-06-12T09:30:53+01:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <p>Yet, another change of blog provider from yours truely!</p>
+<p>I've set up a new blog with Vivaldi:</p>
+<p><a href="https://emdiscussions.vivaldi.net" target="_blank" rel="noopener noreferrer">EMDiscussions - Notes from the Inbox</a></p>
+<p>Now, this <em>may</em> not be a permanent move - I may return here - but I have mirrored all my posts from here into the Vivaldi blog.</p>
+<p>I will leave this blog live for the foreseeable future.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>What&#x27;s in a DKIM Record?</title>
         <author>
@@ -300,28 +320,6 @@
 <p><span style="color: #2dc26b;">&lt;auth_results&gt;</span><br><span style="color: #2dc26b;">&lt;dkim&gt;</span><br><span style="color: #2dc26b;">&lt;domain&gt;&lt;/domain&gt;</span><br><span style="color: #2dc26b;">&lt;selector&gt;&lt;/selector&gt;</span><br><span style="color: #2dc26b;">&lt;result&gt;none&lt;/result&gt;</span><br><span style="color: #2dc26b;">&lt;human_result&gt;no signature data&lt;/human_result&gt;</span><br><span style="color: #2dc26b;">&lt;/dkim&gt;</span><br><span style="color: #2dc26b;">&lt;spf&gt;</span><br><span style="color: #2dc26b;">&lt;domain&gt;example.com&lt;/domain&gt;</span><br><span style="color: #2dc26b;">&lt;scope&gt;mfrom&lt;/scope&gt;</span><br><span style="color: #2dc26b;">&lt;result&gt;fail&lt;/result&gt;</span><br><span style="color: #2dc26b;">&lt;/spf&gt;</span><br><span style="color: #2dc26b;">&lt;/auth_results&gt;</span></p>
 </blockquote>
 <p>This says that both DKIM and SPF have failed, therefore the email was rejected.<br><br>As I did not send the email in question myself, the DMARC record has done it's job and rejected the email as not being legitimate - success!<br><br>I don't have any recent DMARC failure reports (in TXT format) to compare with the above aggregate report, but I may update this post when one becomes available.<br><br>Finally: Just to say, this is not an expert definitive analysis, but just my rudimentary understanding!</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>I asked ChatGPT to create a Google Mail Script</title>
-        <author>
-            <name>EMD</name>
-        </author>
-        <link href="https://alloneword.pages.dev/i-asked-chatgpt-to-create-a-google-mail-script.html"/>
-        <id>https://alloneword.pages.dev/i-asked-chatgpt-to-create-a-google-mail-script.html</id>
-
-        <updated>2026-01-28T09:09:12+00:00</updated>
-            <summary></summary>
-        <content type="html">
-            <![CDATA[
-                <p>I asked ChatGPT:</p>
-<blockquote>
-<p><span style="color: #2dc26b;"><em>Create a Google Gmail script to automatically delete emails older than 7 days that have the label '7-Days'.</em></span></p>
-</blockquote>
-<p>Within a few seconds, I got this response:</p>
-<figure class="post__image"><img loading="lazy"  src="https://alloneword.pages.dev/media/posts/2//google-mail-script.png" alt="Screencap of the generated Google Apps Script." width="880" height="943" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-xs.png 640w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-sm.png 768w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-md.png 1024w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-lg.png 1366w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-xl.png 1600w ,https://alloneword.pages.dev/media/posts/2//responsive/google-mail-script-2xl.png 1920w"></figure>
-<p>Could it be that simple, I asked myself?<br><br>There's only one way to find out, so I copied the code and went to <a href="https://script.google.com" target="_blank" rel="noopener noreferrer">https://script.google.com</a> for my Gmail account and created a new project, and pasted the code.<br><br>Saved and Run, I had to authorise the use of the script.<br><br>Following the ChatGPT instructions on how to set up, I created the trigger to run once an hour, and saved that.<br><br>I was sceptical about whether it would work, but - and admittedly it's early days yet - the script does appear to work!</p>
             ]]>
         </content>
     </entry>
