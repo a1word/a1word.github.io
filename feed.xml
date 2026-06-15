@@ -3,7 +3,7 @@
     <title>Notes from the Inbox</title>
     <link href="https://alloneword.pages.dev/feed.xml" rel="self" />
     <link href="https://alloneword.pages.dev" />
-    <updated>2026-06-12T09:31:53+01:00</updated>
+    <updated>2026-06-15T17:57:41+01:00</updated>
     <author>
         <name>EMD</name>
     </author>
@@ -73,16 +73,16 @@
 <p><a href="https://astermail.org/blog/is-aster-safe-us-based/" target="_blank" rel="noopener noreferrer">Is Aster Safe If It's Based in the US?</a></p>
 <p><a href="https://astermail.org/" target="_blank" rel="noopener noreferrer"></a>After signing up and testing the free 10 GB account, I was quite impressed by the overall set up and the layout of their UI.</p>
 <p>It was also easy to set up one of my own personal domains - the instructions were straightforward and in a matter of minutes it was all set up and working.</p>
-<p>As I'm still talking about their free account, there are some limitations:</p>
+<p>As I'm still talking about their <em>free</em> account, there are some limitations:</p>
 <ol>
 <li>Only one own domain allowed.</li>
 <li>A maximum of five aliases allowed. Once an alias is created, you cannot delete it for a month.</li>
 <li>No catchall - you have to rely on the five own domain aliases only.</li>
-<li>No IMAP/SMTP currently - access via webmail and installers for Windows, Linux, and macOS.</li>
+<li>No IMAP/SMTP - access via webmail and installers for Windows, Linux, and macOS.</li>
 <li>No auto-forward rules.</li>
-<li>Only one mail filter.</li>
+<li>Only two mail filters.</li>
 </ol>
-<p>It's not obvious how/where to set up this one filter, although I assume it's the 'Mail Management' option - which for the free account seems to only include blocked or allowed senders.</p>
+<p>The <em>paid</em> plans include more aliases, more custom domains, catchalls, larger attachments, and unlimited mail filters. IMAP/SMTP is available via their 'Aster Bridge'. </p>
 <p>The main 'selling point' of this free account is the use of one's domain. If you're on the lookout for a free home for your own domain emails, it's certainly worth a try!</p>
 <p><em><strong>Update</strong></em></p>
 <p>Although it was easy to set up my own domain - the instructions were clear and logical - I did encounter a problem with my sent emails not being signed.</p>
