@@ -3,36 +3,54 @@
     <title>Notes from the Inbox</title>
     <link href="https://alloneword.pages.dev/feed.xml" rel="self" />
     <link href="https://alloneword.pages.dev" />
-    <updated>2026-06-15T17:58:45+01:00</updated>
+    <updated>2026-07-09T08:32:55+01:00</updated>
     <author>
         <name>EMD</name>
     </author>
     <id>https://alloneword.pages.dev</id>
 
     <entry>
-        <title>Moved my blog!</title>
+        <title>Do you remember?</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
-        <link href="https://alloneword.pages.dev/moved-my-blog.html"/>
-        <id>https://alloneword.pages.dev/moved-my-blog.html</id>
+        <link href="https://alloneword.pages.dev/do-you-remember.html"/>
+        <id>https://alloneword.pages.dev/do-you-remember.html</id>
+            <category term="Calendars"/>
 
-        <updated>2026-06-12T09:30:53+01:00</updated>
+        <updated>2026-07-09T08:31:30+01:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
-                <p>Yet another change of blog provider from yours truly!</p>
-<p>I've set up a new blog with Vivaldi:</p>
-<p><a href="https://emdiscussions.vivaldi.net" target="_blank" rel="noopener noreferrer">EMDiscussions - Notes from the Inbox</a></p>
-<p>Now, this <em>may</em> not be a permanent move - I may return here - but I have mirrored all my posts from here into the Vivaldi blog.</p>
-<p>I will leave this blog live for the foreseeable future.</p>
+                <p>♬ Do you remember, the 21st night of September? ♬</p>
+<p>I know a song about that! Anyway, to the reason for this post.</p>
+<p>I've been trying out alternatives to Google Calendar, preferably EU-Based providers.</p>
+<p>My main requirements are for event email reminders to work and to arrive on time, plus the ability to search for very old events.</p>
+<p>Google Calendar provides both the above, but what about other providers?</p>
+<ul>
+<li>Zoho: reminders = pass, searches = fail</li>
+<li>Proton: reminders = pass, searches = fail</li>
+<li>Tuta: reminders = pass, searches = fail</li>
+<li>Mailbox: reminders = pass, searches = fail</li>
+<li>Infomaniak: reminders = pass, searches = fail</li>
+<li>Mailo: reminders = fail, searches = pass</li>
+<li>Nextcloud: reminders = fail, searches = pass</li>
+</ul>
+<p>As another experiment, I exported a calendar from Google (that I know works) and imported that calendar into both Zoho Calendar and Mailbox Calendar. Then I exported that calendar out of both of them, and did this comparison:</p>
+<ul>
+<li>Mailbox exported 69 events.</li>
+<li>Zoho exported 111 events.</li>
+<li>Google exported 576 events.</li>
+</ul>
+<p>There may be technical reasons for the difference, but the fact remains that only Google Calendars is suitable for my requirements.</p>
+<p>In the meantime, I'll continue the search for the Holy Grail!</p>
             ]]>
         </content>
     </entry>
     <entry>
         <title>What&#x27;s in a DKIM Record?</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/whats-in-a-dkim-record.html"/>
         <id>https://alloneword.pages.dev/whats-in-a-dkim-record.html</id>
@@ -56,7 +74,7 @@
     <entry>
         <title>Aster Mail Free</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/aster-mail-free.html"/>
         <id>https://alloneword.pages.dev/aster-mail-free.html</id>
@@ -94,7 +112,7 @@
     <entry>
         <title>Mailo - Teething Problems?</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/mailo-teething-problems.html"/>
         <id>https://alloneword.pages.dev/mailo-teething-problems.html</id>
@@ -125,7 +143,7 @@
     <entry>
         <title>Zoho Mail Forever Free Plan</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/zoho-mail-forever-free-plan.html"/>
         <id>https://alloneword.pages.dev/zoho-mail-forever-free-plan.html</id>
@@ -150,7 +168,7 @@
     <entry>
         <title>Create and manage email aliases with MXroute</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/mxroute-alias-manager.html"/>
         <id>https://alloneword.pages.dev/mxroute-alias-manager.html</id>
@@ -174,7 +192,7 @@
     <entry>
         <title>Atomic Mail - My Thoughts</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/atomic-mail-my-thoughts.html"/>
         <id>https://alloneword.pages.dev/atomic-mail-my-thoughts.html</id>
@@ -202,7 +220,7 @@
     <entry>
         <title>Zoho Mail - a cautionary tale, with a happy ending?</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/zoho-mail-a-cautionary-tale-with-a-happy-ending.html"/>
         <id>https://alloneword.pages.dev/zoho-mail-a-cautionary-tale-with-a-happy-ending.html</id>
@@ -224,7 +242,7 @@
     <entry>
         <title>Port87 - label powered email</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/port87-label-powered-email.html"/>
         <id>https://alloneword.pages.dev/port87-label-powered-email.html</id>
@@ -274,7 +292,7 @@
     <entry>
         <title>Understanding DMARC reports</title>
         <author>
-            <name>EMD</name>
+            <name>alloneword</name>
         </author>
         <link href="https://alloneword.pages.dev/understanding-dmarc-reports.html"/>
         <id>https://alloneword.pages.dev/understanding-dmarc-reports.html</id>
