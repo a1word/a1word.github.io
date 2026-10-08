@@ -3,12 +3,39 @@
     <title>Notes from the Inbox</title>
     <link href="https://alloneword.pages.dev/feed.xml" rel="self" />
     <link href="https://alloneword.pages.dev" />
-    <updated>2026-09-19T11:41:35+01:00</updated>
+    <updated>2026-10-08T11:04:53+01:00</updated>
     <author>
         <name>EMD</name>
     </author>
     <id>https://alloneword.pages.dev</id>
 
+    <entry>
+        <title>I asked ChatGPT to create an email client</title>
+        <author>
+            <name>alloneword</name>
+        </author>
+        <link href="https://alloneword.pages.dev/i-asked-chatgpt-to-create-an-email-client.html"/>
+        <id>https://alloneword.pages.dev/i-asked-chatgpt-to-create-an-email-client.html</id>
+
+        <updated>2026-10-08T10:34:20+01:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <p>I asked ChatGPT:</p>
+<p><em>Can you create an email client that works with Linux Mint Cinnamon?</em><br><em>I would like a self-hosted desktop email client that runs through my web browser.</em></p>
+<p>ChatGPT says:</p>
+<figure class="post__image"><img loading="lazy"  src="https://ik.imagekit.io/rkumag9jl/Screenshot%20from%202026-10-08%2010-13-45.png" alt="What ChatGPT says it can build" width="911" height="633" data-is-external-image="true"></figure>
+<p>At first, ChatGPT was very responsive and the bare bones of the application was built up fairly quickly. There followed numerous tweaks to improve the application and it was starting to look like an interesting experiment.<br><br>It had a fairly basic offering - I could set up multiple IMAP/SMTP accounts, and view emails. <br><br>At this stage, ChatGPT started to slow things down - the process of fine-tuning the setup was being continually delayed by ChatGPT being extremely stingy in what help it gives before this happens:</p>
+<figure class="post__image"><img loading="lazy"  src="https://ik.imagekit.io/rkumag9jl/Screenshot%20from%202026-10-08%2010-21-44.png" alt="ChatGPT prompts me to update to a paid plan" width="829" height="110" data-is-external-image="true"></figure>
+<p>Which was another delay of a few hours!<br><br>For example, in my previous test of the client, I sent a test email to one of my other email accounts. The email was sent and successfully received at the destination email account. But there was no copy of that sent email filed in the Sent folder - either in the client or the webmail for that email account.<br><br>I reported this back to ChatGPT, and it said:</p>
+<blockquote>
+<p><span style="color: #2dc26b;">When you're ready, I'll walk you through it one command at a time.</span></p>
+</blockquote>
+<p>Now this is a problem - every time I'm responding to one command at a time, I'm using my free allowance, before ChatGPT halts the process.<br><br>It asks me to:<br><br><em>1. Download the new file.</em><br><em>2. Backup the current data.</em><br><em>3. Stop the currently running application.</em><br><em>4. Move the current installation out of the way.</em><br><em>5. Extract the new file to the same location.</em><br><em>6. Rename the file.</em><br><br>At each stage of the above, I had to confirm I'd done it before proceeding - six questions asked and answered - and again I've run out of the free allowance!<br><br>Instead, ChatGPT could have listed what needed to be done, and THEN asked me to confirm, but I suspect that at this stage the process is becoming drawn out, to the extent that I would then 'upgrade' to be able to accomplish the tasks quicker.<br><br>This was purely an experiment to see what AI could accomplish, and overall, the result is a functioning - but flawed - local email client.<br><br>Will I persevere with it? Only time - and I guess quite a lot of time - will tell!</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Hooroo Fastmail!</title>
         <author>
@@ -260,56 +287,6 @@
 <p>I looked in my password manager (I still have old databases saved) but could not find anywhere that I had used this domain with Zoho. So, I approached Zoho Support and they gave me a 'rough' indication of the username that the alias had been used. I made a guess at the username and got that right, then I was stumped (of course!) by the password - I made a few educated guesses, but not educated enough! So, the next step was the 'forgotten password?' option. Luckily, I still had the recovery address, and so got the new password - and finally got into the account - the account that I had set up in 2012!<br><br>Looking into the Admin Console, I saw that I had deleted the domain in question, but hadn't deleted the alias - and THAT was the big mistake on my part!<br><br>Second problem encountered: Now, to get rid of the alias. I tried to delete it, but Zoho wanted me to verify myself using 2FA authenticator code!</p>
 <p>Hmm, now this IS a problem!<br><br>Where would that code be? I must have saved it somewhere!</p>
 <p>What phone was I using 13 years ago? I've slept a few times since then, and can't remember. Would the code be in an authenticator app on that phone anyway? That's the million dollar question!<br><br>I was, more or less, resigned to the fact that I wouldn't be able to use that alias in my current Zoho account, but gave it one last try. After further experimentation, the problem was the lack of the authenticator code - whatever I tried, I came up against that brick wall.<br><br>Delving further into the account settings, I then looked at the 'MFA Mode' and the 'Authenticator app' option. There was the 'secret key'! I copied that key into my phone authenticator app, and finally managed to complete the deletion of that alias!<br><br>Going back into my current Zoho account, I then added that alias - success!<br><br><strong><span style="color: #e03e2d;">The cautionary tale is: Never abandon a Zoho Mail account if you've attached any own domain aliases to it!</span></strong><br><br>The happy ending?<br><br>Well, apart from finally solving the alias problem, I now also had full access to that 2012 account - and that account has 40GB of storage (basic plan of 5GB plus 'Add-on allotted' of 35GB) and 25 licences!<br> <br>Plus, even though it's a free account, I am able to access my emails using IMAP/SMTP, via my choice of desktop and phone apps.<br><br>Now, I need to figure out a use for that old account!</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Port87 - label powered email</title>
-        <author>
-            <name>alloneword</name>
-        </author>
-        <link href="https://alloneword.pages.dev/port87-label-powered-email.html"/>
-        <id>https://alloneword.pages.dev/port87-label-powered-email.html</id>
-
-        <updated>2026-01-28T10:33:29+00:00</updated>
-            <summary></summary>
-        <content type="html">
-            <![CDATA[
-                <figure class="post__image"><img loading="lazy"  src="https://ik.imagekit.io/rkumag9jl/port87.png" alt="Port87 - A new kind of email. Get back control and focus with organized, spam-free email." width="672" height="344" data-is-external-image="true"></figure>
-<p>It was recently announced that Port87 was out of beta. I had heard about the service previously but had not signed up to test it.<br><br>Here's a link to their website, which will explain their service much better than I could:<br><br><a href="https://port87.com/" target="_blank" rel="noopener noreferrer">Port87 - A new kind of email</a><br> <br>Today, I signed up for the free service - Basic Mail - which has 500MB of storage. Note that only covers receiving of emails. If you want to send emails, get more storage, or use your own domain(s), it's at an additional cost. <br> <br>Here's the link to their pricing:<br><br><a href="https://port87.com/pricing" target="_blank" rel="noopener noreferrer">Pricing - Port87</a><br> <br>When signing up for the service, I had to provide a recovery email address - I used a Gmail address, their verification email was received and verified.<br><br>Now for first test - I created a label 'Social' for - guess what? - social media stuff. Next I logged into my Runbox account and sent a test message to 'myusername-social@port87.com'.</p>
-<p>Shortly after I received this auto-response from Port87:</p>
-<blockquote>
-<div><span style="color: #2dc26b;"><em>This address has email screening enabled. Therefore, Port87 needs you to do a one-time verification that you're a real person. If you can see the blue-gray checkmark below, you're all set. If not, you can enable remote images in your email client or click the link to verify your address. Once verified, your message will be delivered.</em></span></div>
-<div> </div>
-<div><span style="color: #2dc26b;"><em>Verify Address</em></span></div>
-<div> </div>
-<div><span style="color: #2dc26b;"><em>Port87 uses this verification process to prevent unwanted mail from getting to our users. Until you complete this verification, your message will be on hold. If you don't complete this verification within 60 days, your message will be deleted. We apologize for the inconvenience and appreciate your understanding.</em></span></div>
-<div> </div>
-<div><span style="color: #2dc26b;"><em>Best,</em></span></div>
-<div><span style="color: #2dc26b;"><em>The Port87 Team</em></span></div>
-</blockquote>
-<div> </div>
-<div>Once I had verified my address, the original email then appeared in my Port87 account. So far so good!</div>
-<div> </div>
-<div>The next test was sending an email to what Port87 calls my 'bare' address - 'myusername@port87.com'. I would prefer to call it my 'default' address, but anyway . . .</div>
-<div> </div>
-<div>This time, sending from the Gmail account that is my recovery email address for my Port87 account. This is where I encountered the first problem. Although I had received the verification email from Port87 when setting up the account, this time I received nothing - nothing in my Gmail inbox or spam folder! That was surprising to me that Gmail did not flag the first email from Port87, and then just silently dropped the second one. Gmail appear to be classing the second email as spam.</div>
-<div> </div>
-<div>So that test failed.</div>
-<div> </div>
-<div>Tried the same thing again, but sending from an email address hosted by MXroute. Again, and the same as Gmail, I got nothing back. It seems that MXroute had dropped the email.</div>
-<div> </div>
-<div>So that test also failed.</div>
-<div> </div>
-<div>One more try, this time sending from a Fastmail account. Luckier, this time, I got a response back from Port87, but it landed in the spam folder. At least I could mark it as 'not-spam' and then it all worked OK from then on. This is the auto-response received from Port87:</div>
-<div> </div>
-<blockquote>
-<div><span style="color: #2dc26b;">It looks like you've emailed my bare Port87 address, myusername@port87.com, which doesn't get through to me. In order to protect against unwanted messages, Port87 requires you to use a special address to email me. Please re-send your email to one of these addresses:</span><br><span style="color: #2dc26b;">     </span><br><span style="color: #2dc26b;">myusername-friends@port87.com</span><br><span style="color: #2dc26b;">Please use this address if you are a friend or family. </span><br><span style="color: #2dc26b;">     </span><br><span style="color: #2dc26b;"> myusername-inquiries@port87.com</span><br><span style="color: #2dc26b;"> Please use this address if you have a question or request for me. </span><br><span style="color: #2dc26b;">     </span><br><span style="color: #2dc26b;"> myusername-other@port87.com</span><br><span style="color: #2dc26b;"> Use this address for all other reasons. </span><br><span style="color: #2dc26b;">     </span><br><span style="color: #2dc26b;"> myusername-social@port87.com</span><br><span style="color: #2dc26b;"> Please use this address if you are a contact on social media.</span></div>
-</blockquote>
-<div> </div>
-<div>The labels for the first three email addresses (Friends/Inquiries/Other) are already in the system, the fourth label (Social) was created by myself, as stated previously.<br> <br>I've since whitelisted the port87.com domain within my Gmail, MXroute and Fastmail accounts. I've not re-tested those accounts, although that is the logical next step.<br> <br>Early days, first steps, etc.<br> <br><strong><em>Update - November 14th 2025:</em></strong><br> <br>I received a message today from Hunter Perrin, the creator of Port 87 - he had seen my blog entry. He advised that, at the time of my testing the product, there was a bug in Port87 preventing the DKIM signing of the auto-responses to bare address emails. He has since fixed the bug, and so it should be working as expected.<br> <br>I have re-tested again - this time sending from Gmail and Zoho Mail accounts. The verification emails were received as expected in each account.<br> <br>Result = success!</div>
-<div> </div>
-<div> </div>
             ]]>
         </content>
     </entry>
