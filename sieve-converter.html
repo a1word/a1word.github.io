@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plain English to Sieve Filter Converter</title>
+<style>
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --muted: #64748b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent-bg: #eff6ff;
+    --accent-border: #bfdbfe;
+    --warn-bg: #fffbeb;
+    --warn-border: #fde68a;
+    --warn-text: #92400e;
+    --code-bg: #0f172a;
+    --code-text: #f8fafc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 24px 16px;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 4px 0 0 0;
+  }
+  .btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn:hover { background: var(--primary-hover); }
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { background: #f1f5f9; }
+  .btn-danger {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+  }
+  .btn-danger:hover { background: #fecaca; }
+  .tip-box {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: var(--warn-text);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .tip-box strong { color: #78350f; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+  .tab {
+    background: none;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .tab.active {
+    background: var(--accent-bg);
+    color: var(--primary);
+  }
+  label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #334155;
+  }
+  input[type="text"], select, textarea {
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.92rem;
+    font-family: inherit;
+    margin-bottom: 12px;
+  }
+  textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+  .examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .chip {
+    background: #f1f5f9;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    color: #334155;
+    cursor: pointer;
+  }
+  .chip:hover { background: #e2e8f0; }
+  .row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+  .row select { width: 115px; margin-bottom: 0; }
+  .row input { margin-bottom: 0; }
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0 14px 0;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 0;
+    cursor: pointer;
+  }
+  pre {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 14px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    margin: 0 0 12px 0;
+    min-height: 170px;
+    white-space: pre-wrap;
+  }
+  .actions-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .rule-list {
+    margin-top: 14px;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+  .rule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 0.88rem;
+  }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1>Plain English &rarr; Sieve Filter Converter</h1>
+      <p class="subtitle">Create Roundcube-style Sieve rules from plain English or guided options.</p>
+    </div>
+    <button class="btn btn-danger" onclick="resetAll()">Clear &amp; Start Afresh</button>
+  </header>
+
+  <div class="tip-box">
+    <strong>Reminder on External Forwarding (<code>redirect</code>):</strong> Some mail hosts (such as <strong>MXroute</strong>) block custom <code>redirect</code> rules inside Sieve scripts and require external forwarding to be set up in the hosting control panel (e.g., DirectAdmin &rarr; Forwarders) instead. Other providers allow <code>redirect</code> directly in Sieve.
+  </div>
+
+  <div class="grid">
+    <!-- Left Column: Input -->
+    <div class="card">
+      <div class="tabs">
+        <button class="tab active" id="tab-nl" onclick="switchTab('nl')">Plain English</button>
+        <button class="tab" id="tab-form" onclick="switchTab('form')">Guided Builder</button>
+      </div>
+
+      <label for="rule-name">Rule Name (Optional)</label>
+      <input type="text" id="rule-name" placeholder="e.g., Bank Alerts" oninput="updateOutput()">
+
+      <!-- Plain English Mode -->
+      <div id="panel-nl">
+        <label for="nl-input">Describe your filter in normal language</label>
+        <textarea id="nl-input" placeholder="Example: If from alerts@bank.com and subject contains Statement, mark as read and file into Folder X." oninput="updateOutput()"></textarea>
+        
+        <div style="font-size: 0.8rem; color: var(--muted); margin-bottom: 6px;">Quick examples (click to fill):</div>
+        <div class="examples">
+          <span class="chip" onclick="useExample('Invoices', 'If from billing@vendor.com or subject contains Invoice, file into Folder X')">File into Folder X</span>
+          <span class="chip" onclick="useExample('Receipt Alert', 'If from noreply@shop.com and subject contains Order, mark as read and file into Folder X ')">Mark read + Folder X</span>
+          <span class="chip" onclick="useExample('Forward Support', 'If to support@mydomain.com, forward to team@external.com and keep')">Forward to external email</span>
+          <span class="chip" onclick="useExample('Block Spam', 'If subject contains Crypto Giveaway, reject')">Reject message</span>
+        </div>
+      </div>
+
+      <!-- Guided Form Mode -->
+      <div id="panel-form" class="hidden">
+        <label>Match Logic</label>
+        <select id="match-type" onchange="updateOutput()">
+          <option value="allof">Match ALL conditions (AND)</option>
+          <option value="anyof">Match ANY condition (OR)</option>
+        </select>
+
+        <label>Conditions</label>
+        <div id="conditions-container">
+          <div class="row cond-row">
+            <select class="cond-field" onchange="updateOutput()">
+              <option value="from">From</option>
+              <option value="to">To</option>
+              <option value="subject">Subject</option>
+            </select>
+            <input type="text" class="cond-val" placeholder="e.g., news@example.com" oninput="updateOutput()">
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary" style="font-size:0.8rem; padding:5px 10px; margin-bottom:14px;" onclick="addConditionRow()">+ Add Condition</button>
+
+        <label>Actions</label>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" id="act-read" onchange="updateOutput()"> Mark as read (<code>\Seen</code>)
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="act-file-chk" onchange="updateOutput()"> File into folder:
+          </label>
+          <input type="text" id="act-file-val" placeholder="e.g., 7-Days or 10-Days" oninput="document.getElementById('act-file-chk').checked=true; updateOutput()">
+          
+          <label class="checkbox-item">
+            <input type="checkbox" id="act-fwd-chk" onchange="updateOutput()"> Forward to external email:
+          </label>
+          <input type="text" id="act-fwd-val" placeholder="e.g., user@example.com" oninput="document.getElementById('act-fwd-chk').checked=true; updateOutput()">
+
+          <label class="checkbox-item">
+            <input type="checkbox" id="act-reject" onchange="updateOutput()"> Reject message
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="act-stop" checked onchange="updateOutput()"> Stop evaluating further rules (<code>stop;</code>)
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Output -->
+    <div class="card">
+      <label>Generated Sieve Rule</label>
+      <pre id="single-output">// Type a rule on the left to generate Sieve code...</pre>
+      <div class="actions-bar">
+        <button class="btn" onclick="copyText('single-output', this)">Copy Rule</button>
+        <button class="btn btn-secondary" onclick="addToScript()">+ Add to Combined Script</button>
+      </div>
+
+      <div class="rule-list">
+        <label>Combined Script (<span id="rule-count">0</span> rules)</label>
+        <div id="saved-rules-list"></div>
+        <pre id="full-output" style="min-height: 130px;">// Added rules will combine here with a single require header...</pre>
+        <div class="actions-bar">
+          <button class="btn" onclick="copyText('full-output', this)">Copy Full Script</button>
+          <button class="btn btn-secondary" onclick="clearCombined()">Clear Combined List</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let activeTab = 'nl';
+let savedRules = [];
+
+function switchTab(tab) {
+  activeTab = tab;
+  document.getElementById('tab-nl').classList.toggle('active', tab === 'nl');
+  document.getElementById('tab-form').classList.toggle('active', tab === 'form');
+  document.getElementById('panel-nl').classList.toggle('hidden', tab !== 'nl');
+  document.getElementById('panel-form').classList.toggle('hidden', tab !== 'form');
+  updateOutput();
+}
+
+function useExample(name, text) {
+  document.getElementById('rule-name').value = name;
+  document.getElementById('nl-input').value = text;
+  updateOutput();
+}
+
+function addConditionRow() {
+  const container = document.getElementById('conditions-container');
+  const div = document.createElement('div');
+  div.className = 'row cond-row';
+  div.innerHTML = `
+    <select class="cond-field" onchange="updateOutput()">
+      <option value="from">From</option>
+      <option value="to">To</option>
+      <option value="subject">Subject</option>
+    </select>
+    <input type="text" class="cond-val" placeholder="Value..." oninput="updateOutput()">
+    <button type="button" class="btn btn-secondary" style="padding:7px 10px;" onclick="this.parentElement.remove(); updateOutput();">&times;</button>
+  `;
+  container.appendChild(div);
+}
+
+function escapeSieve(str) {
+  return str.replace(/\\/g, '\\\\').replace(/"/g, '\\"').trim();
+}
+
+function parseNaturalLanguage(text) {
+  const raw = text.trim();
+  if (!raw) return null;
+
+  // Split condition part and action part if comma or "then" exists
+  let condPart = raw;
+  let actPart = raw;
+  const splitMatch = raw.match(/^(.*?)(?:,\s*|\bthen\b\s+)(.*)$/i);
+  if (splitMatch) {
+    condPart = splitMatch[1];
+    actPart = splitMatch[2];
+  }
+
+  const logic = /\bor\b/i.test(condPart) ? 'anyof' : 'allof';
+  const conditions = [];
+
+  // Extract from / to / subject patterns
+  const patterns = [
+    { field: 'from', regex: /\bfrom\b\s+(?:is\s+|contains\s+|has\s+)?["']?([^,"'\n]+?)["']?(?=\s+(?:and|or|to|subject|then)\b|,|$)/gi },
+    { field: 'to', regex: /\bto\b\s+(?:is\s+|contains\s+|has\s+)?["']?([^,"'\n]+?)["']?(?=\s+(?:and|or|from|subject|then)\b|,|$)/gi },
+    { field: 'subject', regex: /\bsubject\b\s+(?:is\s+|contains\s+|has\s+)?["']?([^,"'\n]+?)["']?(?=\s+(?:and|or|from|to|then)\b|,|$)/gi }
+  ];
+
+  patterns.forEach(p => {
+    let m;
+    while ((m = p.regex.exec(condPart)) !== null) {
+      const val = m[1].replace(/^(?:is|contains|has)\s+/i, '').trim();
+      if (val) conditions.push({ field: p.field, val });
+    }
+  });
+
+  const actions = [];
+  const requires = new Set();
+
+  if (/\bmark(?:ed)?\s+as\s+read\b|\bseen\b/i.test(actPart)) {
+    requires.add('imap4flags');
+    actions.push('setflag "\\\\Seen";');
+  }
+
+  const folderMatch = actPart.match(/\b(?:file\s+into|move\s+to|folder|put\s+in)\s+["']?([^,"'\n]+?)["']?(?=\s+(?:and|then|stop|keep)\b|,|$)/i);
+  if (folderMatch) {
+    const folder = folderMatch[1].trim();
+    if (folder) {
+      requires.add('fileinto');
+      actions.push(`fileinto "${escapeSieve(folder)}";`);
+    }
+  }
+
+  const fwdMatch = actPart.match(/\b(?:forward\s+to|redirect\s+to|forward|redirect)\s+["']?([^\s,"']+?@[^\s,"']+?)["']?(?=\s+(?:and|then|stop|keep)\b|,|$)/i);
+  if (fwdMatch) {
+    actions.push(`redirect "${escapeSieve(fwdMatch[1])}";`);
+    if (/\bkeep\b/i.test(actPart)) {
+      actions.push('keep;');
+    }
+  }
+
+  if (/\breject\b/i.test(actPart)) {
+    requires.add('reject');
+    actions.push('reject "Message rejected by recipient filter.";');
+  }
+
+  if (actions.length > 0 && !/\bkeep\b/i.test(actPart) && !/\bdon't\s+stop\b/i.test(actPart)) {
+    actions.push('stop;');
+  }
+
+  return { logic, conditions, actions, requires: Array.from(requires) };
+}
+
+function parseForm() {
+  const logic = document.getElementById('match-type').value;
+  const rows = document.querySelectorAll('.cond-row');
+  const conditions = [];
+  rows.forEach(r => {
+    const field = r.querySelector('.cond-field').value;
+    const val = r.querySelector('.cond-val').value.trim();
+    if (val) conditions.push({ field, val });
+  });
+
+  const actions = [];
+  const requires = new Set();
+
+  if (document.getElementById('act-read').checked) {
+    requires.add('imap4flags');
+    actions.push('setflag "\\\\Seen";');
+  }
+  if (document.getElementById('act-file-chk').checked) {
+    const folder = document.getElementById('act-file-val').value.trim();
+    if (folder) {
+      requires.add('fileinto');
+      actions.push(`fileinto "${escapeSieve(folder)}";`);
+    }
+  }
+  if (document.getElementById('act-fwd-chk').checked) {
+    const email = document.getElementById('act-fwd-val').value.trim();
+    if (email) {
+      actions.push(`redirect "${escapeSieve(email)}";`);
+    }
+  }
+  if (document.getElementById('act-reject').checked) {
+    requires.add('reject');
+    actions.push('reject "Message rejected by recipient filter.";');
+  }
+  if (document.getElementById('act-stop').checked && actions.length > 0) {
+    actions.push('stop;');
+  }
+
+  return { logic, conditions, actions, requires: Array.from(requires) };
+}
+
+function buildSieveObj() {
+  const name = document.getElementById('rule-name').value.trim() || 'Custom Rule';
+  const parsed = activeTab === 'nl' ? parseNaturalLanguage(document.getElementById('nl-input').value) : parseForm();
+  if (!parsed || parsed.conditions.length === 0 || parsed.actions.length === 0) return null;
+
+  const condStrings = parsed.conditions.map(c => `header :contains "${c.field}" "${escapeSieve(c.val)}"`);
+  const block = `# rule:[${name}]\nif ${parsed.logic} (${condStrings.join(', ')})\n{\n\t${parsed.actions.join('\n\t')}\n}`;
+  return { name, block, requires: parsed.requires };
+}
+
+function updateOutput() {
+  const obj = buildSieveObj();
+  const out = document.getElementById('single-output');
+  if (!obj) {
+    out.textContent = '// Enter at least one condition (from/to/subject) and one action...';
+    return;
+  }
+  const reqLine = obj.requires.length > 0 ? `require [${obj.requires.map(r => `"${r}"`).join(',')}];\n` : '';
+  out.textContent = reqLine + obj.block;
+}
+
+function addToScript() {
+  const obj = buildSieveObj();
+  if (!obj) return;
+  savedRules.push(obj);
+  renderCombined();
+}
+
+function removeRule(idx) {
+  savedRules.splice(idx, 1);
+  renderCombined();
+}
+
+function clearCombined() {
+  savedRules = [];
+  renderCombined();
+}
+
+function renderCombined() {
+  document.getElementById('rule-count').textContent = savedRules.length;
+  const listEl = document.getElementById('saved-rules-list');
+  listEl.innerHTML = '';
+
+  savedRules.forEach((r, idx) => {
+    const div = document.createElement('div');
+    div.className = 'rule-item';
+    div.innerHTML = `<span><strong>${r.name}</strong></span><button class="btn btn-secondary" style="padding:3px 8px; font-size:0.78rem;" onclick="removeRule(${idx})">Remove</button>`;
+    listEl.appendChild(div);
+  });
+
+  const fullEl = document.getElementById('full-output');
+  if (savedRules.length === 0) {
+    fullEl.textContent = '// Added rules will combine here with a single require header...';
+    return;
+  }
+
+  const allReqs = new Set();
+  savedRules.forEach(r => r.requires.forEach(req => allReqs.add(req)));
+  const reqHeader = allReqs.size > 0 ? `require [${Array.from(allReqs).sort().map(r => `"${r}"`).join(',')}];\n` : '';
+  fullEl.textContent = reqHeader + savedRules.map(r => r.block).join('\n');
+}
+
+function copyText(elementId, btn) {
+  const text = document.getElementById(elementId).textContent;
+  if (text.startsWith('//')) return;
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = orig, 1400);
+  });
+}
+
+function resetAll() {
+  document.getElementById('rule-name').value = '';
+  document.getElementById('nl-input').value = '';
+  document.getElementById('match-type').value = 'allof';
+  document.getElementById('conditions-container').innerHTML = `
+    <div class="row cond-row">
+      <select class="cond-field" onchange="updateOutput()">
+        <option value="from">From</option>
+        <option value="to">To</option>
+        <option value="subject">Subject</option>
+      </select>
+      <input type="text" class="cond-val" placeholder="e.g., news@example.com" oninput="updateOutput()">
+    </div>
+  `;
+  document.getElementById('act-read').checked = false;
+  document.getElementById('act-file-chk').checked = false;
+  document.getElementById('act-file-val').value = '';
+  document.getElementById('act-fwd-chk').checked = false;
+  document.getElementById('act-fwd-val').value = '';
+  document.getElementById('act-reject').checked = false;
+  document.getElementById('act-stop').checked = true;
+  savedRules = [];
+  renderCombined();
+  updateOutput();
+}
+</script>
+</body>
+</html>
