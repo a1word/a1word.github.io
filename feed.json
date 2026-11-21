@@ -11,6 +11,19 @@
     },
     "items": [
         {
+            "id": "https://alloneword.pages.dev/zoho-mail-cloud-uk-personal-plan.html",
+            "url": "https://alloneword.pages.dev/zoho-mail-cloud-uk-personal-plan.html",
+            "title": "Zoho Mail Cloud UK Personal Plan",
+            "content_html": "<p><em><strong>Just to be clear from the outset, this is purely for the free PERSONAL plan only - you still can use an own domain with the personal plan, but at extra cost.</strong></em></p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://ik.imagekit.io/rkumag9jl/Screenshot%20from%202026-11-21%2009-21-01.png\" alt=\"Zoho Mail Cloud UK Sign-up page\" width=\"757\" height=\"842\" data-is-external-image=\"true\"></figure>\n<p><br>The zohomailcloud.co.uk domain became available for UK customers to register in mid-2026, which coincided with the launch of Zoho’s UK data centres in London and Manchester.<br><br>The free plan includes 5 GB mail storage (can be upgraded at additional cost) with the standard zohomailcloud.co.uk email address.<br><br>A very important point to note is that you are not restricted to the use of the Zoho Mail desktop and phone apps, although both are very good. This specific plan DOES include IMAP/SMTP access - I know! I've added my account to my Thunderbird computer desktop and it works perfectly.<br><br>Another plus point is that you can also use 'Send mail as' for external accounts - just add the SMTP server login info for the external account.<br><br>Along with the basic email storage quota, it includes calendars (with CalDAV support), 5 GB of WorkDrive cloud storage (using the Zoho apps for desktop and mobile), and browser-based access to the Zoho Office Suite.<br><br><em>One final point to make clear: When signing up for the UK account, one needs to provide a UK telephone number to verify the account. Once the account has been verified and is up and running - providing that 2FA has been enabled on the account - the telephone number can be removed, which helps if wanting to set up an additional Zoho UK account.</em><br><br>All in all, it's a very good option for UK-based people wanting a free and reliable email account.</p>",
+            "author": {
+                "name": "alloneword"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-11-21T09:21:11+00:00",
+            "date_modified": "2026-11-21T09:30:33+00:00"
+        },
+        {
             "id": "https://alloneword.pages.dev/renew-migadu.html",
             "url": "https://alloneword.pages.dev/renew-migadu.html",
             "title": "Renew Migadu?",
@@ -127,19 +140,6 @@
             ],
             "date_published": "2026-02-10T18:59:03+00:00",
             "date_modified": "2026-07-09T08:29:28+01:00"
-        },
-        {
-            "id": "https://alloneword.pages.dev/atomic-mail-my-thoughts.html",
-            "url": "https://alloneword.pages.dev/atomic-mail-my-thoughts.html",
-            "title": "Atomic Mail - My Thoughts",
-            "content_html": "<p>I signed up for an Atomic Mail account today, and I thought it may be a good idea to set my thoughts on to my blog.<br><br>This first image is the log-on screen:</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://ik.imagekit.io/rkumag9jl/atomic-01.png\" alt=\"Screencap of Atomic Mail setup information.\" width=\"672\" height=\"448\" data-is-external-image=\"true\"></figure>\n<p>I've set up my password manager (KeePassXC) for this account. Usually KeePassXC offers to save the login credentials, but it didn't on this occasion - I had to create the entry manually.<br><br>After entering my user name (first part of my email address) the password screen appears:</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://ik.imagekit.io/rkumag9jl/atomic-02.png\" alt=\"Screencap of Atomic Mail setup information.\" width=\"900\" height=\"429\" data-is-external-image=\"true\"></figure>\n<p>After entering the password, I have enabled two-factor authentication (2FA) so then the 2FA screen appears:</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://ik.imagekit.io/rkumag9jl/atomic-03.png\" alt=\"Screencap of Atomic Mail setup information.\" width=\"900\" height=\"430\" data-is-external-image=\"true\"></figure>\n<p>One can choose from either an authenticator code, or a seed phrase to proceed. For myself, I elect to choose the authenticator code, which is generated from my Aegis phone app:</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://ik.imagekit.io/rkumag9jl/atomic-04.png\" alt=\"Screencap of Atomic Mail setup information.\" width=\"900\" height=\"427\" data-is-external-image=\"true\"></figure>\n<p>After entering the code, the webmail finally opens:</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://ik.imagekit.io/rkumag9jl/atomic-05.png\" alt=\"Screencap of Atomic Mail setup information.\" width=\"900\" height=\"412\" data-is-external-image=\"true\"></figure>\n<p>As you can see, the layout is fairly basic. There is no option to change to a dark theme.<br><br>The email view is set as 'conversation view' - I can't see any way to change that.<br><br>A good point is that one allowed 10 aliases - a useful addition considering that some providers may only allow a few or none at all. <br><br>The settings options are fairly basic:</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://ik.imagekit.io/rkumag9jl/atomic-06.png\" alt=\"Screencap of Atomic Mail setup information.\" width=\"875\" height=\"650\" data-is-external-image=\"true\"></figure>\n<p>There is no option to create filters, although one can manually move emails into different folders. There's no mention of IMAP/SMTP, so I assume that it's not available. I suppose that is comparable to ProtonMail and Tuta - they rely on webmail and dedicated phone apps.<br><br>Atomic Mail does have an Android phone app - available on the Google Play Store - but unfortunately I could not get that to work. I suspect that the 2FA is the problem here. I tried to log in using the app - looking identical to the webmail layout, however when I expecting to see a request for the 2FA code that didn't happen - instead it said something like wrong email address or password, and I couldn't proceed.<br><br>I suppose I should have tried again, but this time by disabling the 2FA to see it that would work. I may try that again at a later date.<br><br>I could log on the webmail account using my phone web browser without problem.<br><br>Today was my first time using Atomic Mail - why not try it for yourself?</p>",
-            "author": {
-                "name": "alloneword"
-            },
-            "tags": [
-            ],
-            "date_published": "2026-01-28T15:18:25+00:00",
-            "date_modified": "2026-07-09T08:29:18+01:00"
         }
     ]
 }
